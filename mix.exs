@@ -50,7 +50,7 @@ defmodule TestApp.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:notifiex, "~> 1.2.0"},
-      {:notifiex_telegram, path: "../notifiex_telegram"}
+      {:notifiex_telegram, path: "./shared/notifiex_telegram"}
     ]
   end
 
