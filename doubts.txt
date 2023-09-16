@@ -1,0 +1,30 @@
+# webhook URL
+https://discord.com/api/webhooks/1148641120532832276/q2Y-d9UNDruG9BbWTjPeR_mW9kMEpdgG4bvJLbppYqaRrbyemtpmYlWlY02ugKfFcR5n
+
+Notifiex.send(:discord, %{content: "Notifiex is cool! 🚀"},  %{webhook: "https://discord.com/api/webhooks/1148641120532832276/q2Y-d9UNDruG9BbWTjPeR_mW9kMEpdgG4bvJLbppYqaRrbyemtpmYlWlY02ugKfFcR5n"})
+
+
+{:ok, pid1} = GenServer.start_link(TestApp.Genserver.First, nil)
+{:ok, pid2} = GenServer.start_link(TestApp.Genserver.Second, nil)
+
+GenServer.cast(pid, {:set_state, "New State"})
+GenServer.call(pid, :get_state)
+
+
+for handle_info in GenServer 1 
+Process.send(pid1, :work, []) 
+
+
+for sync process - `https://whatdidilearn.info/2017/12/17/elixir-multiple-processes-basics.html`
+1. pid3 = spawn(TestApp.Sync.First, :hello, [])
+2. receive do                    
+     {:ok, msg} -> msg             
+     end 
+3.        
+
+Quiz 
+1. "Event se GenServer start karke" (Done)
+2. "same GenServer ke event se second Genserver start "
+3. How to write two GenServer which communicate with each other
+4. GenServer error 
+5.
